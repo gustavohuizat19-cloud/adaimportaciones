@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada Importaciones</title>
+    <!-- Icono de la pestaña (Favicon) -->
+    <link rel="icon" href="logo.png" type="image/png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Eliminar flechas de inputs numéricos */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        input[type=number] { -moz-appearance: textfield; }
+        
+        .tab-active { background-color: #0F172A; color: white; transform: scale(1.05); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .tab-inactive { color: #64748b; }
+        .tab-inactive:hover { color: #1e293b; background-color: rgba(0,0,0,0.05); }
+
+        /* Ajustes de transición suaves */
+        .transition-all { transition-duration: 300ms; }
+    </style>
+</head>
+<body class="min-h-screen bg-[#FDFCFB] text-slate-800 overflow-x-hidden selection:bg-red-100 selection:text-red-900 text-left">
+
+    <!-- --- HERO SECTION --- -->
+    <header class="relative bg-[#0F172A] text-white pt-12 pb-20 md:pt-28 md:pb-40 px-4 md:px-6 overflow-hidden text-left">
+        <div class="absolute top-0 right-0 w-[250px] h-[250px] md:w-[600px] md:h-[600px] bg-red-600 rounded-full filter blur-[80px] md:blur-[150px] opacity-10 -mr-32 -mt-32 animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-[250px] h-[250px] md:w-[600px] md:h-[600px] bg-blue-600 rounded-full filter blur-[80px] md:blur-[150px] opacity-10 -ml-32 -mb-32"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10 text-center">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 text-red-400 rounded-full text-[10px] md:text-xs font-black uppercase mb-8 tracking-[0.2em] backdrop-blur-md">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                </span>
+                Clases Intensivas 2026
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tight uppercase leading-[1.1] md:leading-[0.95] text-balance">
+                Domina las Importaciones de <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400">USA</span>
+            </h1>
+            
+            <p class="text-sm sm:text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed font-medium italic px-4">
+                Aprende el paso a paso profesional para traer productos de Estados Unidos a Perú con las mejores agencias y estrategias fiscales.
+            </p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 px-4">
+                <a href="#simulator" class="w-full md:w-auto px-8 py-5 bg-red-600 hover:bg-red-700 text-white rounded-2xl font-black uppercase tracking-widest transition-all shadow-xl shadow-red-600/20 active:scale-95 flex items-center justify-center gap-2">
+                    <i data-lucide="calculator" class="w-5 h-5"></i> Ir al Simulador
+                </a>
+                <a href="https://wa.me/51928200100" target="_blank" class="w-full md:w-auto px-8 py-5 bg-green-600 hover:bg-green-700 text-white rounded-2xl font-black uppercase tracking-widest transition-all shadow-xl shadow-green-600/20 active:scale-95 flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i> CONTACTAR
+                </a>
+                <div class="flex items-center gap-3 bg-white/5 px-6 py-4 rounded-2xl backdrop-blur-md border border-white/10 shadow-sm w-full md:w-auto justify-center md:justify-start">
+                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow-lg overflow-hidden p-1.5 border border-white/20">
+                        <img src="logo.png" class="w-full h-full object-contain" alt="Logo Ada">
+                    </div>
+                    <div class="text-left">
+                        <span class="block font-black text-[10px] uppercase tracking-tighter text-slate-300">Instructora</span>
+                        <span class="font-bold text-sm text-white italic whitespace-nowrap">Adameli Huiza Blas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- --- AGENDA SECTION --- -->
+    <section class="py-16 md:py-24 px-4 md:px-6 max-w-6xl mx-auto text-left">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6 text-center md:text-left">
+            <div class="flex flex-col items-center md:items-start">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tighter italic flex items-center gap-3">
+                    <i data-lucide="layout-grid" class="text-blue-600 w-8 h-8"></i> Agenda del Curso
+                </h2>
+                <div class="h-1.5 w-24 bg-red-500 mt-3 rounded-full"></div>
+            </div>
+            <p class="text-slate-500 font-bold uppercase text-[10px] md:text-xs tracking-widest opacity-70">Contenido Académico 2026</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-left">
+            <div class="group bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden flex flex-col h-full">
+                <div class="absolute top-0 right-0 p-6 text-slate-50 group-hover:text-slate-100 transition-colors -mr-4 -mt-4 text-6xl font-black opacity-10">01</div>
+                <div class="mb-8 p-4 bg-slate-50 rounded-2xl w-fit group-hover:scale-110 group-hover:bg-blue-50 transition-all"><i data-lucide="shield-check" class="text-blue-600"></i></div>
+                <h3 class="text-lg font-black mb-4 text-slate-800 uppercase tracking-tight italic leading-tight">Normas y Tarifas</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Regulaciones de SUNAT y comparación de costos entre almacenes.</p>
+            </div>
+            <div class="group bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden flex flex-col h-full text-left">
+                <div class="absolute top-0 right-0 p-6 text-slate-50 group-hover:text-slate-100 transition-colors -mr-4 -mt-4 text-6xl font-black opacity-10">02</div>
+                <div class="mb-8 p-4 bg-slate-50 rounded-2xl w-fit group-hover:scale-110 group-hover:bg-red-50 transition-all"><i data-lucide="refresh-cw" class="text-red-600"></i></div>
+                <h3 class="text-lg font-black mb-4 text-slate-800 uppercase tracking-tight italic leading-tight">Canales y Aduanas</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Gestión de tiempos y canales de control (Verde, Naranja, Rojo).</p>
+            </div>
+            <div class="group bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden flex flex-col h-full text-left">
+                <div class="absolute top-0 right-0 p-6 text-slate-50 group-hover:text-slate-100 transition-colors -mr-4 -mt-4 text-6xl font-black opacity-10">03</div>
+                <div class="mb-8 p-4 bg-slate-50 rounded-2xl w-fit group-hover:scale-110 group-hover:bg-blue-50 transition-all"><i data-lucide="globe" class="text-blue-600"></i></div>
+                <h3 class="text-lg font-black mb-4 text-slate-800 uppercase tracking-tight italic leading-tight">Proceso de Compra</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Configuración de Amazon, eBay, y más como tambien el uso del Shipping Address.</p>
+            </div>
+            <div class="group bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 relative overflow-hidden flex flex-col h-full text-left">
+                <div class="absolute top-0 right-0 p-6 text-slate-50 group-hover:text-slate-100 transition-colors -mr-4 -mt-4 text-6xl font-black opacity-10">04</div>
+                <div class="mb-8 p-4 bg-slate-50 rounded-2xl w-fit group-hover:scale-110 group-hover:bg-red-50 transition-all"><i data-lucide="truck" class="text-red-600"></i></div>
+                <h3 class="text-lg font-black mb-4 text-slate-800 uppercase tracking-tight italic leading-tight">Gestión Logística</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Consolidación de paquetes y recepción de mercancía en Perú.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- NORMAS SECTION --- -->
+    <section class="py-20 bg-slate-50 px-4 md:px-6 border-y border-slate-200 text-left">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-4">Normativa Aduanera</h2>
+            <p class="text-slate-500 text-[10px] md:text-sm font-black uppercase tracking-[0.3em] opacity-60">Lo que debes saber antes de comprar</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- CON DNI -->
+            <div class="bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 shadow-sm border-t-8 border-blue-600 flex flex-col hover:shadow-xl transition-all text-left">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="p-4 bg-blue-50 rounded-[1.5rem] text-blue-600 shadow-inner shrink-0"><i data-lucide="user" class="w-8 h-8"></i></div>
+                    <div>
+                        <h3 class="text-xl font-black uppercase tracking-tight">CON DNI</h3>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Persona Natural</p>
+                    </div>
+                </div>
+                <ul class="space-y-6 mb-10 flex-grow text-left">
+                    <li class="flex items-start gap-4"><div class="mt-1 bg-green-100 p-1 rounded-full text-green-600 shrink-0"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div><span class="text-sm font-medium">Límite de <strong>3 importaciones al año</strong> o 1 sola de hasta $3,000 (acumulado).</span></li>
+                    <li class="flex items-start gap-4"><div class="mt-1 bg-green-100 p-1 rounded-full text-green-600 shrink-0"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div><span class="text-sm font-medium">Compras <strong>menores a $200</strong> están libres de impuestos.</span></li>
+                    <li class="flex items-start gap-4"><div class="mt-1 bg-red-100 p-1 rounded-full text-red-600 shrink-0"><i data-lucide="alert-triangle" class="w-4 h-4"></i></div><span class="text-sm font-black text-red-700 italic">Si superas los $200, pagas entre 22% y 25% de impuestos.</span></li>
+                </ul>
+                <div class="pt-8 border-t border-slate-100 grid grid-cols-2 gap-4 text-center">
+                    <div class="bg-slate-50 p-4 rounded-2xl"><p class="text-[10px] font-black text-slate-400 uppercase mb-1">Monto Máximo por envio</p><p class="text-lg font-black text-blue-600">$2,000 USD</p></div>
+                    <div class="bg-slate-50 p-4 rounded-2xl"><p class="text-[10px] font-black text-slate-400 uppercase mb-1">Frecuencia</p><p class="text-lg font-black text-blue-600">3 importaciones de $1,000 x Año</p></div>
+                </div>
+            </div>
+
+            <!-- CON RUC -->
+            <div class="bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 shadow-sm border-t-8 border-red-600 flex flex-col hover:shadow-xl transition-all text-left">
+                <div class="flex items-center gap-5 mb-8">
+                    <div class="p-4 bg-red-50 rounded-[1.5rem] text-red-600 shadow-inner shrink-0"><i data-lucide="building-2" class="w-8 h-8"></i></div>
+                    <div>
+                        <h3 class="text-xl font-black uppercase tracking-tight">CON RUC 10 / 20</h3>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Emprendedores / Empresas</p>
+                    </div>
+                </div>
+                <div class="space-y-6 flex-grow text-left">
+                    <div class="bg-green-600 p-6 rounded-[2rem] text-white flex items-center gap-4 shadow-lg shadow-green-600/20">
+                        <i data-lucide="badge-check" class="w-8 h-8 shrink-0"></i>
+                        <span class="font-black text-sm md:text-base uppercase tracking-tight italic">¡Importaciones ILIMITADAS durante todo el año!</span>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="p-5 bg-slate-50 rounded-2xl border-l-4 border-blue-600">
+                            <h4 class="font-black text-blue-700 text-xs uppercase mb-2 italic">RUC 10 (persona natural con negocio)</h4>
+                            <p class="text-[11px] md:text-xs font-bold text-slate-500 leading-tight">Permite importar productos de marca sin restricciones (ejemplo: MacBooks, celulares, etc.). Ideal para uso personal o reventa pequeña.</p>
+                        </div>
+                        <div class="p-5 bg-slate-50 rounded-2xl border-l-4 border-red-600">
+                            <h4 class="font-black text-red-700 text-xs uppercase mb-2 italic">RUC 20 (empresa jurídica)</h4>
+                            <p class="text-[11px] md:text-xs font-bold text-slate-500 leading-tight">Diseñado para negocios formales. Permite importar de forma ilimitada, pero bajo mayor control aduanero.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-100 text-left">
+                    <p class="text-[9px] md:text-[10px] font-black text-slate-400 mb-4 uppercase tracking-[0.2em] italic">EN RESUMEN:</p>
+                    <ul class="space-y-3 text-[10px] md:text-xs font-black text-slate-700 uppercase italic">
+                        <li class="flex items-center gap-3 text-blue-600"><i data-lucide="check" class="w-4 h-4"></i> HASTA $200 → 0% IMPUESTOS.</li>
+                        <li class="flex items-center gap-3 text-orange-600"><i data-lucide="check" class="w-4 h-4"></i> DE $200 A $2,000 → 22%-25% IMPUESTOS.</li>
+                        <li class="flex items-center gap-3 text-green-600"><i data-lucide="check" class="w-4 h-4"></i> IMPORTACIONES ILIMITADAS CON RUC.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- AGENCIAS & SHIPPING --- -->
+    <section class="py-20 px-4 md:px-6 max-w-7xl mx-auto text-left">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-8">Agencias Logísticas</h2>
+            <div class="flex justify-center">
+                <div class="bg-slate-100 p-1.5 md:p-2 rounded-2xl md:rounded-3xl flex w-full max-w-xs border border-slate-200 shadow-inner">
+                    <button onclick="changeAgency('inkargo')" id="tab-inkargo" class="flex-1 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all tab-active">InKARGO</button>
+                    <button onclick="changeAgency('wex')" id="tab-wex" class="flex-1 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all tab-inactive">WEX</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 text-left items-stretch mb-8">
+            <!-- Row 1 Left: Agency Details Card -->
+            <div class="lg:col-span-8 bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-8 lg:p-10 border border-slate-200 shadow-sm overflow-hidden relative">
+                <div class="grid grid-cols-2 gap-4 border-b border-slate-100 pb-8 mb-8 text-center">
+                    <div class="px-2">
+                        <p class="text-[9px] md:text-[10px] text-slate-400 font-black uppercase tracking-[0.2em] mb-4 italic text-center">Tarifa por KG</p>
+                        <p id="agency-kg" class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black tracking-tighter text-blue-600 text-center">$5.95</p>
+                    </div>
+                    <div class="border-l border-slate-100 px-2">
+                        <p class="text-[9px] md:text-[10px] text-slate-400 font-black uppercase tracking-[0.2em] mb-4 italic text-center">Desaduanaje</p>
+                        <p id="agency-des" class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black tracking-tighter text-slate-800 text-center">$8.00</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 text-left">
+                    <div class="flex items-center gap-4 p-4 lg:p-5 bg-slate-50 rounded-[1.5rem] border border-slate-100 hover:bg-white transition-all">
+                        <i data-lucide="badge-check" class="text-green-500 shrink-0 w-6 h-6"></i>
+                        <span id="agency-tax-info" class="text-xs md:text-sm font-black italic uppercase tracking-tight">LIBRE DE TAX</span>
+                    </div>
+                    <div id="agency-perfume-tag" class="flex items-center gap-4 p-4 lg:p-5 rounded-[1.5rem] border bg-red-50 border-red-100 text-red-700 hover:bg-white transition-all text-left">
+                        <div id="agency-perfume-icon-container" class="shrink-0"><i data-lucide="ban" class="w-6 h-6"></i></div>
+                        <span id="agency-perfume-info" class="text-xs md:text-sm font-black italic uppercase tracking-tight">NO PERMITE PERFUMES</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 text-left">
+                    <div class="flex items-center gap-4 p-4 lg:p-5 bg-slate-50 rounded-[1.5rem] border border-slate-100 hover:bg-white transition-all">
+                        <i data-lucide="wallet" class="text-blue-500 shrink-0 w-6 h-6"></i>
+                        <span id="agency-impuestos-gestion" class="text-xs md:text-sm font-black italic uppercase tracking-tight leading-tight">GESTIONAN TU PAGO Y TE COBRAN DIRECTO</span>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 lg:p-5 bg-slate-50 rounded-[1.5rem] border border-slate-100 hover:bg-white transition-all">
+                        <i data-lucide="map" class="text-orange-500 shrink-0 w-6 h-6"></i>
+                        <span id="agency-provincia" class="text-xs md:text-sm font-black italic uppercase tracking-tight leading-tight">ENVÍO A PROVINCIAS: URBANO</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4 mb-8 text-left">
+                    <div id="agency-viajeros-tag" class="flex items-center gap-4 p-4 lg:p-5 rounded-[1.5rem] border bg-slate-50 border-slate-100 text-slate-700 hover:bg-white transition-all">
+                        <div id="agency-viajeros-icon-container" class="shrink-0"><i data-lucide="plane" class="w-6 h-6"></i></div>
+                        <span id="agency-viajeros-info" class="text-xs md:text-sm font-black italic uppercase tracking-tight leading-tight">NO VIAJEROS</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-between items-center bg-blue-50/50 p-6 rounded-[2rem] border border-blue-100 text-left">
+                    <div class="flex items-center gap-4 w-full sm:w-auto">
+                        <i data-lucide="phone" class="text-blue-600 w-8 h-8 shrink-0"></i>
+                        <div class="text-left">
+                            <p class="text-[9px] md:text-[10px] font-black text-slate-400 uppercase italic">WhatsApp Agencia</p>
+                            <p id="agency-phone" class="text-lg md:text-xl font-black">930 331 963</p>
+                        </div>
+                    </div>
+                    <a id="agency-wa-link" href="https://wa.me/51930331963" target="_blank" class="w-full sm:w-auto text-center px-8 py-4 bg-[#0F172A] text-white rounded-xl font-black text-[10px] md:text-xs uppercase tracking-widest hover:bg-blue-600 transition-all shadow-md">Contactar Ahora</a>
+                </div>
+            </div>
+
+            <!-- Row 1 Right: Office Card -->
+            <div class="lg:col-span-4 bg-white rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-10 border border-slate-200 shadow-sm text-center flex flex-col justify-between h-full">
+                <div>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-blue-50 rounded-[2rem] flex items-center justify-center mx-auto mb-8 shadow-inner">
+                        <i data-lucide="map-pin" class="text-blue-600 w-8 h-8 md:w-10 md:h-10"></i>
+                    </div>
+                    <h4 class="font-black text-xl uppercase tracking-tight mb-4 italic underline decoration-blue-200 decoration-4 underline-offset-4 text-center">Oficina en Lima</h4>
+                    <p id="lima-office" class="text-sm md:text-base text-slate-500 font-bold mb-8 leading-relaxed uppercase px-4 italic text-center">JR Brigadier Mateo Pumacahua 2541 - Lince</p>
+                    
+                    <div class="bg-slate-50 p-6 md:p-8 rounded-[2rem] border border-slate-100 mb-6 text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4 text-slate-400">
+                            <i data-lucide="clock" class="text-red-500 w-5 h-5"></i>
+                            <p class="text-[10px] font-black uppercase tracking-widest text-center">Horario de Atención</p>
+                        </div>
+                        <p class="text-sm md:text-base font-black italic text-slate-800 uppercase text-center">
+                            LUNES A VIERNES<br/>
+                            <span id="lima-hours" class="text-2xl md:text-3xl block mt-2 text-center">9AM - 6PM</span>
+                        </p>
+                    </div>
+
+                    <div class="mb-8 p-5 bg-blue-600 rounded-[2rem] shadow-xl relative after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-[12px] after:border-transparent after:border-t-blue-600">
+                        <p class="text-white font-black text-[10px] md:text-xs uppercase tracking-tight leading-tight italic text-center">
+                            AQUÍ PUEDES RECOGER TUS IMPORTACIONES O SOLICITAR TU ENVÍO A DOMICILIO O PROVINCIA.
+                        </p>
+                    </div>
+                </div>
+
+                <button id="btn-maps" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Jr.+Brigadier+Mateo+Pumacahua+2541,+Lince', '_blank')" class="w-full py-5 bg-[#0F172A] text-white rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg hover:scale-[1.03] transition-all">Ver en Google Maps</button>
+            </div>
+        </div>
+
+        <!-- Row 2: ADDRESS CARD FULL WIDTH -->
+        <div class="w-full">
+            <div class="bg-[#0F172A] text-white rounded-[2.5rem] md:rounded-[3.5rem] p-6 md:p-10 lg:p-14 relative overflow-hidden shadow-2xl border-b-[15px] border-red-600 text-left">
+                <div class="relative z-10 text-left">
+                    <div class="flex items-center gap-4 mb-8 pb-6 border-b border-white/10">
+                        <i data-lucide="map-pin" class="text-red-500 w-10 h-10"></i>
+                        <h4 class="text-2xl md:text-4xl font-black uppercase italic tracking-tighter">Shipping Address (USA)</h4>
+                    </div>
+                    <div class="space-y-8 text-left max-w-5xl">
+                        <div>
+                            <label class="text-[10px] md:text-xs font-black text-red-500 uppercase tracking-widest mb-3 block italic text-left">Full Name / Name</label>
+                            <div id="address-name" class="bg-white/5 p-5 lg:p-8 rounded-2xl border border-white/10 font-mono text-base sm:text-xl lg:text-2xl break-all text-left">
+                                <span class="text-white/40 mr-4 font-sans text-[10px] md:text-sm uppercase">NAME:</span> ESX100139 INKARGO ADA [TU NOMBRE]
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                            <div>
+                                <label class="text-[10px] md:text-xs font-black text-blue-400 uppercase tracking-widest mb-3 block italic text-left">Address Line 1</label>
+                                <div id="address-line1" class="bg-white/5 p-5 lg:p-6 rounded-2xl border border-white/10 font-mono text-sm md:text-xl break-words text-left">9990 NW 14TH ST STE 110</div>
+                            </div>
+                            <div>
+                                <label class="text-[10px] md:text-xs font-black text-blue-400 uppercase tracking-widest mb-3 block italic text-left">City, State, Zip</label>
+                                <div id="address-city" class="bg-white/5 p-5 lg:p-6 rounded-2xl border border-white/10 font-mono text-sm md:text-xl uppercase text-left">DORAL, FL, 33192</div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-[10px] md:text-xs font-black text-blue-400 uppercase tracking-widest mb-3 block italic text-left">Phone Number</label>
+                            <div id="address-phone-number" class="bg-white/5 p-5 lg:p-6 rounded-2xl border border-white/10 font-mono text-sm md:text-xl text-left">+1 (786) 845-8828</div>
+                        </div>
+                        <div class="p-6 bg-yellow-500/10 border border-yellow-500/20 rounded-2xl flex items-start gap-4 text-left">
+                            <i data-lucide="zap" class="text-yellow-500 shrink-0 mt-1 w-6 h-6"></i>
+                            <p id="address-important-note" class="text-xs md:text-sm lg:text-base font-bold text-yellow-200/80 leading-relaxed italic text-left">IMPORTANTE: Es vital incluir tu código de casillero (ESX...) en el nombre para que el almacén identifique tu paquete al llegar.</p>
+                        </div>
+                    </div>
+                </div>
+                <i data-lucide="globe" class="absolute right-[-5%] bottom-[-5%] text-white/5 opacity-10 rotate-12 w-64 h-64 lg:w-[500px] lg:h-[500px]"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- CANALES DE ADUANAS SECTION --- -->
+    <section class="py-16 md:py-24 bg-white px-4 md:px-6 max-w-5xl mx-auto border-y border-slate-100 shadow-sm rounded-[3rem] mt-10 text-left">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-5xl font-black uppercase tracking-tighter italic text-red-600 leading-none px-4">CANALES DE ADUANAS:</h2>
+            <p class="text-[11px] md:text-sm text-slate-500 mt-4 font-bold uppercase tracking-widest opacity-70 italic">Control de mercancía al llegar al Perú</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center bg-slate-50/50 p-8 md:p-16 rounded-[3rem] border border-slate-100 shadow-inner text-left">
+            <!-- Semáforo Visual -->
+            <div class="md:col-span-4 flex justify-center">
+                <div class="w-24 md:w-36 bg-[#0F172A] p-6 md:p-8 rounded-[2.5rem] md:rounded-[3rem] flex flex-row md:flex-col justify-center gap-6 md:gap-8 shadow-2xl border-4 border-slate-700">
+                    <div class="w-12 h-12 md:w-20 md:h-20 bg-red-500 rounded-full shadow-[0_0_20px_rgba(239,68,68,0.5)] border-4 border-red-400/20 animate-pulse shrink-0"></div>
+                    <div class="w-12 h-12 md:w-20 md:h-20 bg-orange-400 rounded-full opacity-50 shrink-0"></div>
+                    <div class="w-12 h-12 md:w-20 md:h-20 bg-green-500 rounded-full opacity-50 shrink-0"></div>
+                </div>
+            </div>
+
+            <!-- Información Canales -->
+            <div class="md:col-span-8 space-y-6 md:space-y-10 leading-none font-bold text-left">
+                <div class="flex items-center gap-5 md:gap-8 group transition-all">
+                    <div class="w-12 h-12 md:w-20 md:h-20 bg-red-100 text-red-600 rounded-2xl md:rounded-3xl flex items-center justify-center shrink-0 shadow-sm border border-red-200">
+                        <i data-lucide="arrow-right" class="w-6 h-6 md:w-10 md:h-10 rotate-[-45deg]"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-red-700 font-black text-sm md:text-2xl uppercase italic tracking-tighter leading-none text-left">CANAL ROJO:</h4>
+                        <p class="text-slate-600 text-[10px] md:text-base font-black uppercase leading-none mt-2 opacity-80 italic text-left">REVISIÓN DOCUMENTARIA + MERCANCÍA</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 md:gap-8 group transition-all text-left">
+                    <div class="w-12 h-12 md:w-20 md:h-20 bg-orange-100 text-orange-600 rounded-2xl md:rounded-3xl flex items-center justify-center shrink-0 shadow-sm border border-orange-200 text-left">
+                        <i data-lucide="arrow-right" class="w-6 h-6 md:w-10 md:h-10 text-left"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-orange-700 font-black text-sm md:text-2xl uppercase italic tracking-tighter leading-none text-left">CANAL NARANJA:</h4>
+                        <p class="text-slate-600 text-[10px] md:text-base font-black uppercase leading-none mt-2 opacity-80 italic text-left">REVISIÓN DOCUMENTARIA</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 md:gap-8 group transition-all text-left">
+                    <div class="w-12 h-12 md:w-20 md:h-20 bg-green-100 text-green-600 rounded-2xl md:rounded-3xl flex items-center justify-center shrink-0 shadow-sm border border-green-200 text-left">
+                        <i data-lucide="arrow-right" class="w-6 h-6 md:w-10 md:h-10 rotate-[45deg] text-left"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-green-700 font-black text-sm md:text-2xl uppercase italic tracking-tighter leading-none text-left">CANAL VERDE:</h4>
+                        <p class="text-slate-600 text-[10px] md:text-base font-black uppercase leading-none mt-2 underline decoration-green-200 decoration-4 italic opacity-80 text-left">PASE LIBRE SIN REVISIÓN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- MÉTODOS DE IMPORTACIÓN SECTION --- -->
+    <section class="py-16 md:py-24 px-4 md:px-6 max-w-6xl mx-auto text-left">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-6xl font-black uppercase tracking-tighter italic mb-4 text-red-600">MÉTODOS DE IMPORTACIÓN:</h2>
+            <p class="text-[11px] md:text-base text-slate-500 mt-4 font-bold uppercase tracking-widest opacity-70 italic text-center">Elige la forma de traer tu producto</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 text-left">
+            <!-- Método Currier -->
+            <div class="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl border border-slate-100 flex flex-col hover:translate-y-[-8px] transition-all text-left">
+                <div class="flex items-center gap-5 md:gap-6 mb-10 text-left">
+                    <div class="p-4 md:p-6 bg-blue-50 rounded-[1.5rem] md:rounded-[2rem] text-blue-600 shadow-inner text-left"><i data-lucide="package" class="w-10 h-10"></i></div>
+                    <div class="text-left">
+                        <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight italic text-blue-600 text-left">COURIER O ALMACÉN</h3>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest text-left">Para consolidar múltiples compras</p>
+                    </div>
+                </div>
+                <div class="space-y-8 text-left">
+                    <p class="text-sm md:text-base font-medium leading-relaxed italic text-slate-600 text-left">Compras en cualquier plataforma y envías al almacén. Pagas por el peso de tu carga y el desaduanaje.</p>
+                    <ul class="space-y-5 border-t border-slate-50 pt-8 text-xs md:text-base font-black uppercase tracking-tight text-slate-700 text-left">
+                        <li class="flex items-center gap-4 text-left"><i data-lucide="check-circle" class="text-blue-500 w-6 h-6 shrink-0 text-left"></i> PAGAS PESO ($5.95 KG InKARGO)</li>
+                        <li class="flex items-center gap-4 text-left"><i data-lucide="check-circle" class="text-blue-500 w-6 h-6 shrink-0 text-left"></i> PAGAS DESADUANAJE ($8.00 InKARGO)</li>
+                        <li class="flex items-center gap-4 text-left"><i data-lucide="check-circle" class="text-red-500 w-6 h-6 shrink-0 text-left"></i> PAGAS IMPUESTOS SI SUPERA $200</li>
+                        <li class="flex items-center gap-4 text-green-600 text-left"><i data-lucide="plus-circle" class="w-6 h-6 shrink-0 text-left"></i> PUEDES CONSOLIDAR PAQUETES SINO EXCEDE LOS $200</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Método Viajeros -->
+            <div class="bg-[#0F172A] rounded-[3rem] p-8 md:p-16 shadow-xl text-white flex flex-col hover:translate-y-[-8px] transition-all relative overflow-hidden text-left">
+                <div class="flex items-center gap-5 md:gap-6 mb-10 relative z-10 text-left">
+                    <div class="p-4 md:p-6 bg-white/5 rounded-[1.5rem] md:rounded-[2rem] text-yellow-400 shadow-inner text-left"><i data-lucide="zap" class="w-10 h-10"></i></div>
+                    <div class="text-left">
+                        <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight italic text-yellow-400 text-left">MÉTODO VIAJEROS (WEX)</h3>
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest text-left">Ideal para productos costosos (+ $200)</p>
+                    </div>
+                </div>
+                <div class="space-y-8 relative z-10 text-left">
+                    <p class="text-sm md:text-base font-medium leading-relaxed italic text-slate-300 text-left">Solicitas cotización directa a WEX. Un viajero trae tu producto personalmente hasta San Miguel o entrega a domicilio.</p>
+                    <ul class="space-y-5 border-t border-white/5 pt-8 text-xs md:text-base font-black uppercase tracking-tight text-slate-100 text-left">
+                        <li class="flex items-center gap-4 text-green-400 text-left"><i data-lucide="minus-circle" class="w-6 h-6 shrink-0 text-left"></i> NO PAGAS POR PESO</li>
+                        <li class="flex items-center gap-4 text-green-400 text-left"><i data-lucide="minus-circle" class="w-6 h-6 shrink-0 text-left"></i> NO PAGAS DESADUANAJE</li>
+                        <li class="flex items-center gap-4 text-green-400 text-left"><i data-lucide="minus-circle" class="w-6 h-6 shrink-0 text-left"></i> SIN IMPUESTOS (AUNQUE SUPERE $200)</li>
+                        <li class="flex items-center gap-4 text-yellow-400 text-left"><i data-lucide="dollar-sign" class="w-6 h-6 shrink-0 text-left"></i> PAGAS EL SERVICIO AL LLEGAR A PERÚ</li>
+                    </ul>
+                </div>
+                <i data-lucide="plane" class="absolute right-[-20px] bottom-[-20px] text-white opacity-5 w-64 h-64 -rotate-12"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- SIMULADOR SECTION --- -->
+    <section id="simulator" class="py-20 md:py-32 bg-[#0F172A] text-white px-4 md:px-6 text-left">
+        <div class="max-w-6xl mx-auto text-left">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20 items-start text-left">
+                <div class="lg:col-span-7 space-y-12 text-left">
+                    <div class="text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-red-600/20 text-red-400 rounded-full text-xs font-black uppercase tracking-widest border border-red-500/30 mb-8 italic text-left"><i data-lucide="calculator" class="w-4 h-4 text-left"></i> Herramienta de Cotización</div>
+                        <h2 class="text-4xl md:text-7xl font-black uppercase tracking-tighter italic leading-tight mb-10 text-left">Calcula tu Inversión <br/><span class="text-red-500 underline decoration-red-900 decoration-8 underline-offset-8 text-left">Puesto en Lima</span></h2>
+                        <div class="bg-white/5 p-2 rounded-2xl md:rounded-3xl flex gap-2 border border-white/10 max-w-sm mb-12 text-left">
+                            <button onclick="changeCalcAgency('inkargo')" id="calc-inkargo" class="flex-1 py-4 rounded-xl md:rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all bg-white text-blue-600 shadow-2xl text-center text-left">InKARGO</button>
+                            <button onclick="changeCalcAgency('wex')" id="calc-wex" class="flex-1 py-4 rounded-xl md:rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all text-slate-500 text-center text-left">WEX</button>
+                        </div>
+                    </div>
+
+                    <!-- Campos Comunes -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
+                        <div class="space-y-4 text-left">
+                            <label class="text-[10px] font-black uppercase tracking-[0.3em] px-2 text-slate-500 italic text-left">Cantidad</label>
+                            <div class="relative group text-left">
+                                <i data-lucide="layers" class="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 text-left"></i>
+                                <input type="number" id="input-cantidad" value="1" min="1" oninput="updateCalculator()" class="w-full bg-white/5 border-2 border-white/10 rounded-[1.5rem] py-6 pl-14 pr-6 focus:outline-none focus:border-red-500 text-2xl font-black transition-all shadow-inner text-white text-left">
+                            </div>
+                        </div>
+                        <div class="space-y-4 text-left">
+                            <label class="text-[10px] font-black uppercase tracking-[0.3em] px-2 text-slate-500 italic text-left">Precio Unit. (USD)</label>
+                            <div class="relative group text-left">
+                                <i data-lucide="dollar-sign" class="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 text-left"></i>
+                                <input type="number" id="input-costo" value="180" oninput="updateCalculator()" class="w-full bg-white/5 border-2 border-white/10 rounded-[1.5rem] py-6 pl-14 pr-6 focus:outline-none focus:border-red-500 text-2xl font-black transition-all shadow-inner text-white text-left">
+                            </div>
+                        </div>
+                        <!-- Este campo se ocultará en Método Viajero -->
+                        <div id="container-peso" class="space-y-4 text-left">
+                            <label class="text-[10px] font-black uppercase tracking-[0.3em] px-2 text-slate-500 italic text-left">Peso Total (KG)</label>
+                            <div class="relative group text-left">
+                                <input type="number" id="input-peso" value="1" oninput="updateCalculator()" class="w-full bg-white/5 border-2 border-white/10 rounded-[1.5rem] py-6 px-8 focus:outline-none focus:border-red-500 text-2xl font-black transition-all shadow-inner text-white text-left">
+                                <span class="absolute right-8 top-1/2 -translate-y-1/2 text-slate-500 font-black italic text-xs md:text-sm text-left">KG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campos de Impuestos/TC (Se ocultan en Método Viajero) -->
+                    <div id="container-impuestos" class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
+                        <div class="space-y-4 text-left">
+                            <label class="text-[10px] font-black uppercase tracking-[0.3em] px-2 text-red-500 italic text-left">Tipo de Cambio (S/)</label>
+                            <div class="relative text-left">
+                                <i data-lucide="trending-up" class="absolute left-6 top-1/2 -translate-y-1/2 text-red-500 text-left"></i>
+                                <input type="number" id="input-tc" step="0.01" value="3.75" oninput="updateCalculator()" class="w-full bg-red-600/10 border-2 border-red-500/30 rounded-[1.5rem] py-6 pl-14 pr-6 focus:outline-none focus:border-red-500 text-2xl font-black transition-all text-white text-left">
+                            </div>
+                        </div>
+                        <div class="space-y-4 text-left">
+                            <label class="text-[10px] font-black uppercase tracking-[0.3em] px-2 text-blue-400 italic text-left">Impuesto Aduanas (%)</label>
+                            <div class="relative text-left">
+                                <i data-lucide="percent" class="absolute left-6 top-1/2 -translate-y-1/2 text-blue-400 text-left"></i>
+                                <input type="number" id="input-impuesto" value="22" oninput="updateCalculator()" class="w-full bg-blue-600/10 border-2 border-blue-500/30 rounded-[1.5rem] py-6 pl-14 pr-6 focus:outline-none focus:border-red-500 text-2xl font-black transition-all text-white text-left">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Opciones Específicas WEX -->
+                    <div id="wex-options" class="hidden flex-col gap-6 text-left">
+                        <div class="flex gap-2 bg-white/5 p-1.5 rounded-2xl border border-white/10 max-w-sm">
+                            <button onclick="changeWexMethod('courier')" id="wex-courier" class="flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest bg-white text-slate-900 transition-all">Courier</button>
+                            <button onclick="changeWexMethod('viajero')" id="wex-viajero" class="flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-400 transition-all">Método Viajero</button>
+                        </div>
+
+                        <!-- Sección Courier WEX -->
+                        <div id="wex-courier-fields" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <button onclick="toggleTax()" id="btn-tax" class="p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all bg-green-600/20 border-green-500 text-green-400 text-left">
+                                <div class="flex items-center gap-4 text-left">
+                                    <i data-lucide="dollar-sign" class="text-left"></i>
+                                    <div class="text-left"><p class="text-[10px] font-black uppercase mb-1 text-left">Tax USA (7%)</p><p class="text-[9px] font-bold opacity-60 text-left">Florida Sales Tax</p></div>
+                                </div>
+                                <div class="w-10 h-6 rounded-full relative bg-green-500 shrink-0 text-left"><div class="absolute top-1 right-1 w-4 h-4 bg-white rounded-full text-left"></div></div>
+                            </button>
+                            <button onclick="togglePerfume()" id="btn-perfume" class="p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all bg-white/5 border-white/10 text-slate-500 text-left">
+                                <div class="flex items-center gap-4 text-left">
+                                    <i data-lucide="badge-check" class="text-left"></i>
+                                    <div class="text-left"><p class="text-[10px] font-black uppercase mb-1 text-left">Es Perfume</p><p class="text-[9px] font-bold opacity-60 text-left">Tarifa: $12.00/kg</p></div>
+                                </div>
+                                <div class="w-10 h-6 rounded-full relative bg-slate-700 shrink-0 text-left"><div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full text-left"></div></div>
+                            </button>
+                        </div>
+
+                        <!-- Sección Viajero WEX -->
+                        <div id="wex-viajero-fields" class="hidden space-y-4">
+                            <label class="text-[10px] font-black uppercase tracking-[0.3em] px-2 text-yellow-500 italic text-left">Costo Servicio Viajero (USD)</label>
+                            <div class="relative group text-left max-w-sm">
+                                <i data-lucide="zap" class="absolute left-6 top-1/2 -translate-y-1/2 text-yellow-500 text-left"></i>
+                                <input type="number" id="input-viajero-fee" value="25" oninput="updateCalculator()" class="w-full bg-yellow-500/10 border-2 border-yellow-500/30 rounded-[1.5rem] py-6 pl-14 pr-6 focus:outline-none focus:border-yellow-500 text-2xl font-black transition-all shadow-inner text-white text-left">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="alert-box" class="p-8 bg-green-500 text-green-950 rounded-[2.5rem] flex gap-6 font-black text-sm shadow-2xl border-l-[12px] border-green-700 italic text-left">
+                        <div id="alert-icon-container" class="shrink-0 text-left"><i data-lucide="shield-check" class="w-10 h-10 text-left"></i></div>
+                        <span id="alert-text" class="text-left">¡EXCELENTE! Tu compra es menor a $200. No pagas impuestos de aduanas (0%).</span>
+                    </div>
+                </div>
+
+                <!-- Recibo Final -->
+                <div class="lg:col-span-5 sticky lg:top-12 text-left">
+                    <div class="bg-white text-slate-900 rounded-[3rem] p-8 md:p-14 shadow-[0_40px_120px_rgba(0,0,0,0.5)] relative overflow-hidden text-left">
+                        <i data-lucide="truck" class="absolute top-0 right-0 p-12 text-slate-50 rotate-12 opacity-40 w-60 h-60 text-left"></i>
+                        <div class="relative z-10 text-left">
+                            <div class="flex justify-between items-start mb-12 border-b-2 border-slate-100 pb-8 text-left">
+                                <div class="text-left"><h3 class="text-2xl sm:text-3xl font-black italic uppercase tracking-tighter mb-1 text-left">Liquidación</h3><p id="receipt-agency-name" class="text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] italic text-left">inkargo Logistics Express</p></div>
+                                <div id="receipt-icon-bg" class="p-4 rounded-2xl bg-blue-600 text-white shadow-xl text-center text-left"><i data-lucide="package" class="text-left"></i></div>
+                            </div>
+                            <div class="space-y-6 mb-12 text-left">
+                                <div class="flex justify-between items-end border-b border-slate-50 pb-4 text-left"><span class="text-slate-400 text-xs font-black uppercase tracking-widest italic text-left">Total Mercancía</span><span id="res-costo" class="text-2xl font-black text-slate-800 tracking-tight text-right font-black italic text-left">$180.00</span></div>
+                                <div id="res-rows-courier" class="space-y-4 text-left">
+                                    <div class="flex justify-between text-sm font-bold text-slate-500 italic uppercase text-left"><span>Flete Int. (<span id="res-peso-val" class="text-left">1</span> Kg)</span><span id="res-envio" class="text-slate-800 font-black text-right font-black text-left">$5.95</span></div>
+                                    <div class="flex justify-between text-sm font-bold text-slate-500 italic uppercase text-left"><span>Servicio Almacén</span><span id="res-des" class="text-slate-800 font-black text-right font-black text-left">$8.00</span></div>
+                                    <div class="flex justify-between text-sm font-bold text-slate-500 italic uppercase text-left"><span>Tax USA (7%)</span><span id="res-taxusa" class="text-slate-400 font-black text-right font-black text-left">$0.00 FREE</span></div>
+                                    <div id="res-impuestos-row" class="flex justify-between p-5 rounded-2xl border bg-green-50 border-green-100 text-green-700 transition-all text-left">
+                                        <span class="text-xs font-black uppercase tracking-widest italic text-left">Impuestos Perú</span><span id="res-impuestos" class="text-xl font-black italic text-right text-left">$0.00 Impuestos</span>
+                                    </div>
+                                </div>
+                                <!-- Fila para Método Viajero -->
+                                <div id="res-rows-viajero" class="hidden space-y-4 text-left">
+                                    <div class="flex justify-between p-5 rounded-2xl border bg-yellow-50 border-yellow-200 text-yellow-800 transition-all text-left">
+                                        <span class="text-xs font-black uppercase tracking-widest italic text-left">Costo Viajero</span><span id="res-viajero-fee" class="text-xl font-black italic text-right text-left">$25.00</span>
+                                    </div>
+                                    <p class="text-[10px] font-black text-slate-400 uppercase italic leading-tight text-center">Este método no paga peso, desaduanaje ni impuestos de aduana.</p>
+                                </div>
+                            </div>
+                            <div class="space-y-8 text-left">
+                                <div class="flex justify-between items-center border-t-4 border-dashed border-slate-100 pt-8 text-left"><span class="text-xs font-black uppercase text-slate-400 tracking-[0.4em] italic text-left">TOTAL INVERSIÓN (USD)</span><span id="res-totalusd" class="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter italic text-blue-600 text-right text-left">$193.95</span></div>
+                                <div id="res-totalpen-bg" class="p-8 md:p-10 rounded-[2.5rem] shadow-2xl text-white relative overflow-hidden bg-[#0F172A] text-left">
+                                    <div class="relative z-10 text-left">
+                                        <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4 text-left">
+                                            <span class="text-[10px] font-black uppercase opacity-60 tracking-[0.4em] italic text-left">Total en Soles</span>
+                                            <span class="text-[10px] font-black px-3 py-1.5 bg-black/20 rounded-full border border-white/10 uppercase tracking-widest text-right text-left">T.C. <span id="res-tc-val" class="text-left">3.75</span></span>
+                                        </div>
+                                        <div id="res-totalpen" class="text-4xl md:text-6xl font-black tracking-tighter italic border-t border-white/10 pt-8 text-center sm:text-left text-left">S/ 727.31</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- FOOTER --- -->
+<footer class="bg-[#0B1F3A] text-slate-200 py-12 md:py-14 px-4 md:px-6 border-t border-white/10">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-8">
+
+    <!-- LEFT -->
+    <div class="w-full md:max-w-xl text-center md:text-left">
+      <div class="flex flex-col sm:flex-row items-center sm:items-center gap-4 mb-4">
+        <div class="shrink-0 flex items-center justify-center bg-gradient-to-br from-[#FCFCFC] to-[#FCFCFC] p-3 rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.35)] border border-white/10 hover:scale-105 transition-all duration-300">
+          <img src="logo.png" class="w-32 md:w-36 object-contain drop-shadow-[0_6px_14px_rgba(0,0,0,0.45)]" alt="Logo Ada Importaciones">
+        </div>
+        <h3 class="font-black text-2xl md:text-3xl uppercase tracking-tight italic text-white leading-tight">Guía Logística Profesional 2026</h3>
+      </div>
+      <a href="https://wa.me/51917825650" class="inline-block bg-yellow-400 hover:bg-yellow-300 text-[#0B1F3A] font-bold text-xs md:text-sm uppercase tracking-widest px-5 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:scale-105">Inscribirme al Curso</a>
+      <p class="text-slate-400 text-xs md:text-sm mt-3">+500 alumnos capacitados • Importaciones reales USA → Perú</p>
+      <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 mt-5">
+        <a href="#" class="text-slate-400 hover:text-white transition-colors uppercase text-[10px] font-bold tracking-widest">Facebook</a>
+        <a href="https://www.tiktok.com/@adameli_importaciones?_r=1&_t=ZS-94Gy2FXSInU" class="text-slate-400 hover:text-white transition-colors uppercase text-[10px] font-bold tracking-widest">Tiktok</a>
+        <a href="https://www.instagram.com/ada_importaciones/?utm_source=ig_web_button_share_sheet" class="text-slate-400 hover:text-white transition-colors uppercase text-[10px] font-bold tracking-widest">Instagram</a>
+        <a href="https://wa.me/51928200100" class="text-slate-400 hover:text-white transition-colors uppercase text-[10px] font-bold tracking-widest">WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="text-center md:text-right space-y-3">
+      <p class="text-slate-300 text-xs md:text-sm font-semibold">Aprende a importar desde USA de forma segura y rentable</p>
+      <div class="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-white bg-[#132A4A] px-4 py-2 rounded-full border border-white/10">
+        <i data-lucide="globe" class="w-4 h-4"></i> Lima, Perú © 2026
+      </div>
+      <p class="text-slate-500 text-xs">Soporte: +51 917825650</p>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        // --- Estado Global ---
+        let currentAgency = 'inkargo';
+        let currentCalcAgency = 'inkargo';
+        let wexMethod = 'courier'; // 'courier' o 'viajero'
+        let aplicarTaxUSA = true;
+        let esPerfume = false;
+
+        const agencies = {
+            inkargo: {
+                kg: '$5.95', des: '$8.00', taxInfo: 'LIBRE DE TAX FLORIDA', perfumeInfo: 'NO PERMITE PERFUMES',
+                impuestosGestion: 'GESTIONAN TU PAGO Y TE COBRAN DIRECTO', provincia: 'ENVÍO A PROVINCIAS: URBANO',
+                viajeros: 'NO VIAJEROS',
+                importantNote: 'IMPORTANTE: Es vital incluir tu código de casillero (ESX...) en el nombre para que el almacén identifique tu paquete al llegar.',
+                phone: '930 331 963', 
+                wa: '51930331963',
+                office: 'JR Brigadier Mateo Pumacahua 2541 - Lince', hours: '9AM - 6PM',
+                mapUrl: 'https://www.google.com/maps/search/?api=1&query=Jr.+Brigadier+Mateo+Pumacahua+2541,+Lince',
+                address: { 
+                    name: 'ESX100139 INKARGO ADA [TU NOMBRE]', 
+                    line1: '9990 NW 14TH ST STE 110', 
+                    city: 'DORAL, FL, 33192',
+                    phone: '+1 (786) 845-8828'
+                }
+            },
+            wex: {
+                kg: '$8.00', des: '$5.00', taxInfo: 'SUJETO A TAX USA (7%)', perfumeInfo: 'SÍ PERFUMES ($12/KG)',
+                impuestosGestion: 'TÚ MISMO GESTIONAS TU PAGO EN UN BANCO', provincia: 'ENVÍO A PROVINCIAS: SHALOM',
+                viajeros: 'SÍ VIAJEROS',
+                importantNote: 'IMPORTANTE: ES VITAL INGRESAR LOS DATOS TAL COMO SE INDICA EN LA DIRECCION DE ENVIO DEL ALMACEN',
+                phone: '963 317 258', 
+                wa: '51963317258',
+                office: 'Av La Paz 1420 - San Miguel, Lima', hours: '9AM - 6:30PM',
+                mapUrl: 'https://www.google.com/maps/search/?api=1&query=Av.+La+Paz+1420,+San+Miguel,+Lima',
+                address: { 
+                    name: '[TUS NOMBRES + APELLIDOS]', 
+                    line1: '8584 NW 56TH ST', 
+                    city: 'DORAL, FL, 33166',
+                    phone: '+1 (786) 409- 7865'
+                }
+            }
+        };
+
+        const tarifas = {
+            inkargo: { kg: 5.95, des: 8.00 },
+            wex: { kg: 8.00, des: 5.00 }
+        };
+
+        function changeAgency(agency) {
+            currentAgency = agency;
+            const data = agencies[agency];
+            document.getElementById('tab-inkargo').className = agency === 'inkargo' ? 'flex-1 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all tab-active text-center' : 'flex-1 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all tab-inactive text-center';
+            document.getElementById('tab-wex').className = agency === 'wex' ? 'flex-1 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all tab-active text-center' : 'flex-1 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest transition-all tab-inactive text-center';
+            document.getElementById('agency-kg').innerText = data.kg;
+            document.getElementById('agency-des').innerText = data.des;
+            document.getElementById('agency-tax-info').innerText = data.taxInfo;
+            document.getElementById('agency-perfume-info').innerText = data.perfumeInfo;
+            document.getElementById('agency-impuestos-gestion').innerText = data.impuestosGestion;
+            document.getElementById('agency-provincia').innerText = data.provincia;
+            document.getElementById('agency-viajeros-info').innerText = data.viajeros;
+            document.getElementById('agency-phone').innerText = data.phone;
+            document.getElementById('agency-wa-link').href = `https://wa.me/${data.wa}`;
+            document.getElementById('lima-office').innerText = data.office;
+            document.getElementById('lima-hours').innerText = data.hours;
+            document.getElementById('btn-maps').onclick = () => window.open(data.mapUrl, '_blank');
+            const perfumeContainer = document.getElementById('agency-perfume-icon-container');
+            const perfumeTag = document.getElementById('agency-perfume-tag');
+            const viajerosContainer = document.getElementById('agency-viajeros-icon-container');
+            const viajerosTag = document.getElementById('agency-viajeros-tag');
+            if (agency === 'inkargo') {
+                perfumeTag.className = 'flex items-center gap-4 p-4 lg:p-5 rounded-[1.5rem] border bg-red-50 border-red-100 text-red-700 text-left';
+                perfumeContainer.innerHTML = '<i data-lucide="ban" class="w-6 h-6"></i>';
+                viajerosTag.className = 'flex items-center gap-4 p-4 lg:p-5 rounded-[1.5rem] border bg-red-50 border-red-100 text-red-700 text-left';
+                viajerosContainer.innerHTML = '<i data-lucide="ban" class="w-6 h-6"></i>';
+            } else {
+                perfumeTag.className = 'flex items-center gap-4 p-4 lg:p-5 rounded-[1.5rem] border bg-green-50 border-green-100 text-green-700 text-left';
+                perfumeContainer.innerHTML = '<i data-lucide="check-circle-2" class="w-6 h-6"></i>';
+                viajerosTag.className = 'flex items-center gap-4 p-4 lg:p-5 rounded-[1.5rem] border bg-green-50 border-green-100 text-green-700 text-left';
+                viajerosContainer.innerHTML = '<i data-lucide="plane" class="w-6 h-6"></i>';
+            }
+            document.getElementById('address-name').innerHTML = `<span class="text-white/40 mr-4 font-sans text-[10px] md:text-sm uppercase text-left">NAME:</span> ${data.address.name}`;
+            document.getElementById('address-line1').innerText = data.address.line1;
+            document.getElementById('address-city').innerText = data.address.city;
+            document.getElementById('address-phone-number').innerText = data.address.phone;
+            document.getElementById('address-important-note').innerText = data.importantNote;
+            lucide.createIcons();
+        }
+
+        function changeCalcAgency(agency) {
+            currentCalcAgency = agency;
+            document.getElementById('calc-inkargo').className = agency === 'inkargo' ? 'flex-1 py-4 rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all bg-white text-blue-600 shadow-2xl text-center' : 'flex-1 py-4 rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all text-slate-500 text-center';
+            document.getElementById('calc-wex').className = agency === 'wex' ? 'flex-1 py-4 rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all bg-white text-red-600 shadow-2xl text-center' : 'flex-1 py-4 rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all text-slate-500 text-center';
+            
+            const wexOptions = document.getElementById('wex-options');
+            if (agency === 'wex') {
+                wexOptions.classList.remove('hidden');
+                wexOptions.classList.add('flex');
+            } else {
+                wexOptions.classList.add('hidden');
+                wexOptions.classList.remove('flex');
+                esPerfume = false;
+                wexMethod = 'courier';
+                updatePerfumeUI();
+            }
+            document.getElementById('receipt-agency-name').innerText = `${agency} Logistics Express`;
+            document.getElementById('receipt-icon-bg').className = `p-4 rounded-2xl ${agency === 'inkargo' ? 'bg-blue-600' : 'bg-red-600'} text-white shadow-xl text-center text-left`;
+            updateCalculator();
+        }
+
+        function changeWexMethod(method) {
+            wexMethod = method;
+            document.getElementById('wex-courier').className = method === 'courier' ? 'flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest bg-white text-slate-900 shadow-sm' : 'flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-400';
+            document.getElementById('wex-viajero').className = method === 'viajero' ? 'flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest bg-white text-slate-900 shadow-sm' : 'flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-400';
+            
+            if (method === 'viajero') {
+                document.getElementById('wex-viajero-fields').classList.remove('hidden');
+                document.getElementById('wex-courier-fields').classList.add('hidden');
+                document.getElementById('container-peso').classList.add('opacity-30', 'pointer-events-none');
+                document.getElementById('container-impuestos').classList.add('opacity-30', 'pointer-events-none');
+            } else {
+                document.getElementById('wex-viajero-fields').classList.add('hidden');
+                document.getElementById('wex-courier-fields').classList.remove('hidden');
+                document.getElementById('container-peso').classList.remove('opacity-30', 'pointer-events-none');
+                document.getElementById('container-impuestos').classList.remove('opacity-30', 'pointer-events-none');
+            }
+            updateCalculator();
+        }
+
+        function toggleTax() {
+            aplicarTaxUSA = !aplicarTaxUSA;
+            const btn = document.getElementById('btn-tax');
+            btn.className = `p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all ${aplicarTaxUSA ? 'bg-green-600/20 border-green-500 text-green-400' : 'bg-white/5 border-white/10 text-slate-500 text-left'}`;
+            btn.querySelector('.w-10').className = `w-10 h-6 rounded-full relative transition-all ${aplicarTaxUSA ? 'bg-green-500' : 'bg-slate-700'} text-left`;
+            btn.querySelector('.absolute').className = `absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${aplicarTaxUSA ? 'right-1' : 'left-1'} text-left`;
+            updateCalculator();
+        }
+
+        function togglePerfume() {
+            esPerfume = !esPerfume;
+            updatePerfumeUI();
+            updateCalculator();
+        }
+
+        function updatePerfumeUI() {
+            const btn = document.getElementById('btn-perfume');
+            btn.className = `p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all ${esPerfume ? 'bg-red-600/20 border-red-500 text-red-400' : 'bg-white/5 border-white/10 text-slate-500 text-left'}`;
+            btn.querySelector('.w-10').className = `w-10 h-6 rounded-full relative transition-all ${esPerfume ? 'bg-red-500' : 'bg-slate-700'} text-left`;
+            btn.querySelector('.absolute').className = `absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${esPerfume ? 'right-1' : 'left-1'} text-left`;
+        }
+
+        function updateCalculator() {
+            const cantidad = parseInt(document.getElementById('input-cantidad').value) || 1;
+            const precioUnitario = parseFloat(document.getElementById('input-costo').value) || 0;
+            const peso = parseFloat(document.getElementById('input-peso').value) || 0;
+            const tc = parseFloat(document.getElementById('input-tc').value) || 0;
+            const pctImp = parseFloat(document.getElementById('input-impuesto').value) || 0;
+            const costoViajeroFee = parseFloat(document.getElementById('input-viajero-fee').value) || 0;
+
+            const costoTotalMercancia = precioUnitario * cantidad;
+            let totalUSD = 0;
+
+            // Mostrar/Ocultar Filas de Recibo
+            const courierRows = document.getElementById('res-rows-courier');
+            const viajeroRows = document.getElementById('res-rows-viajero');
+
+            if (currentCalcAgency === 'wex' && wexMethod === 'viajero') {
+                courierRows.classList.add('hidden');
+                viajeroRows.classList.remove('hidden');
+                
+                totalUSD = costoTotalMercancia + costoViajeroFee;
+                document.getElementById('res-viajero-fee').innerText = `$${costoViajeroFee.toFixed(2)}`;
+                document.getElementById('alert-box').className = "p-8 bg-yellow-500 text-yellow-950 rounded-[2.5rem] flex gap-6 font-black text-sm shadow-2xl border-l-[12px] border-yellow-700 italic text-left";
+                document.getElementById('alert-text').innerText = `MODO VIAJERO: No pagas peso ni impuestos de aduana. Solo el valor del producto + comisión.`;
+                document.getElementById('alert-icon-container').innerHTML = '<i data-lucide="zap" class="w-10 h-10 text-white text-left"></i>';
+            } else {
+                courierRows.classList.remove('hidden');
+                viajeroRows.classList.add('hidden');
+
+                const rate = tarifas[currentCalcAgency];
+                const taxUSA = (currentCalcAgency === 'wex' && aplicarTaxUSA) ? costoTotalMercancia * 0.07 : 0;
+                let envioTarifa = rate.kg;
+                if (esPerfume && currentCalcAgency === 'wex') envioTarifa = 12.00;
+                const costoEnvio = peso * envioTarifa;
+                const desaduanaje = rate.des;
+                const impuestos = costoTotalMercancia > 200 ? costoTotalMercancia * (pctImp / 100) : 0;
+                
+                totalUSD = costoTotalMercancia + taxUSA + costoEnvio + desaduanaje + impuestos;
+
+                document.getElementById('res-peso-val').innerText = peso;
+                document.getElementById('res-envio').innerText = `$${costoEnvio.toFixed(2)}`;
+                document.getElementById('res-des').innerText = `$${desaduanaje.toFixed(2)}`;
+                document.getElementById('res-taxusa').innerText = taxUSA > 0 ? `$${taxUSA.toFixed(2)}` : '$0.00 FREE';
+                document.getElementById('res-impuestos').innerText = impuestos > 0 ? `$${impuestos.toFixed(2)}` : '$0.00 FREE';
+                document.getElementById('res-impuestos-row').className = `flex justify-between p-5 rounded-2xl border transition-all ${impuestos > 0 ? 'bg-red-50 border-red-100 text-red-700 font-black italic' : 'bg-green-50 border-green-100 text-green-700 font-black shadow-inner border-green-200'}`;
+                
+                // Alertas de Impuestos
+                if (costoTotalMercancia > 200) {
+                    document.getElementById('alert-box').className = "p-8 bg-orange-500 text-orange-950 rounded-[2.5rem] flex gap-6 font-black text-sm shadow-2xl border-l-[12px] border-orange-700 italic animate-pulse";
+                    document.getElementById('alert-text').innerText = `ALERTA: Al superar los $200 (Total: $${costoTotalMercancia.toFixed(2)}), Aduanas Perú aplicará impuestos.`;
+                    document.getElementById('alert-icon-container').innerHTML = '<i data-lucide="alert-triangle" class="w-10 h-10 text-white text-left"></i>';
+                } else {
+                    document.getElementById('alert-box').className = "p-8 bg-green-500 text-green-950 rounded-[2.5rem] flex gap-6 font-black text-sm shadow-2xl border-l-[12px] border-green-700 italic";
+                    document.getElementById('alert-text').innerText = `¡EXCELENTE! Tu compra de $${costoTotalMercancia.toFixed(2)} es menor a $200. No pagas impuestos (0%).`;
+                    document.getElementById('alert-icon-container').innerHTML = '<i data-lucide="shield-check" class="w-10 h-10 text-white text-left"></i>';
+                }
+            }
+
+            const totalPEN = totalUSD * tc;
+            document.getElementById('res-costo').innerText = `$${costoTotalMercancia.toFixed(2)}`;
+            document.getElementById('res-totalusd').innerText = `$${totalUSD.toFixed(2)}`;
+            document.getElementById('res-totalusd').className = `text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter italic ${currentCalcAgency === 'inkargo' ? 'text-blue-600' : 'text-red-600'} text-right`;
+            document.getElementById('res-totalpen-bg').className = `p-8 md:p-10 rounded-[2.5rem] shadow-2xl text-white relative overflow-hidden ${currentCalcAgency === 'inkargo' ? 'bg-[#0F172A]' : 'bg-red-600'}`;
+            document.getElementById('res-tc-val').innerText = tc.toFixed(2);
+            document.getElementById('res-totalpen').innerText = `S/ ${totalPEN.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            lucide.createIcons();
+        }
+
+        window.onload = () => {
+            lucide.createIcons();
+            updateCalculator();
+        }
+    </script>
+</body>
+</html>

@@ -473,6 +473,17 @@
                         </div>
                     </div>
 
+                    <!-- Opciones Adicionales para InKARGO (Tax USA) -->
+                    <div id="inkargo-options" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <button onclick="toggleTax()" id="btn-tax-inkargo" class="p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all bg-white/5 border-white/10 text-slate-500 text-left">
+                            <div class="flex items-center gap-4 text-left">
+                                <i data-lucide="dollar-sign" class="text-left"></i>
+                                <div class="text-left"><p class="text-[10px] font-black uppercase mb-1 text-left">Tax USA (7%)</p><p class="text-[9px] font-bold opacity-60 text-left">Solo algunas páginas</p></div>
+                            </div>
+                            <div class="w-10 h-6 rounded-full relative bg-slate-700 shrink-0 text-left"><div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full text-left"></div></div>
+                        </button>
+                    </div>
+
                     <!-- Opciones Específicas WEX -->
                     <div id="wex-options" class="hidden flex-col gap-6 text-left">
                         <div class="flex gap-2 bg-white/5 p-1.5 rounded-2xl border border-white/10 max-w-sm">
@@ -482,12 +493,12 @@
 
                         <!-- Sección Courier WEX -->
                         <div id="wex-courier-fields" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <button onclick="toggleTax()" id="btn-tax" class="p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all bg-green-600/20 border-green-500 text-green-400 text-left">
+                            <button onclick="toggleTax()" id="btn-tax-wex" class="p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all bg-white/5 border-white/10 text-slate-500 text-left">
                                 <div class="flex items-center gap-4 text-left">
                                     <i data-lucide="dollar-sign" class="text-left"></i>
                                     <div class="text-left"><p class="text-[10px] font-black uppercase mb-1 text-left">Tax USA (7%)</p><p class="text-[9px] font-bold opacity-60 text-left">Florida Sales Tax</p></div>
                                 </div>
-                                <div class="w-10 h-6 rounded-full relative bg-green-500 shrink-0 text-left"><div class="absolute top-1 right-1 w-4 h-4 bg-white rounded-full text-left"></div></div>
+                                <div class="w-10 h-6 rounded-full relative bg-slate-700 shrink-0 text-left"><div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full text-left"></div></div>
                             </button>
                             <button onclick="togglePerfume()" id="btn-perfume" class="p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all bg-white/5 border-white/10 text-slate-500 text-left">
                                 <div class="flex items-center gap-4 text-left">
@@ -598,7 +609,7 @@
         let currentAgency = 'inkargo';
         let currentCalcAgency = 'inkargo';
         let wexMethod = 'courier'; // 'courier' o 'viajero'
-        let aplicarTaxUSA = true;
+        let aplicarTaxUSA = false; // Desactivado por defecto como solicitado
         let esPerfume = false;
 
         const agencies = {
@@ -687,18 +698,23 @@
             document.getElementById('calc-wex').className = agency === 'wex' ? 'flex-1 py-4 rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all bg-white text-red-600 shadow-2xl text-center' : 'flex-1 py-4 rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all text-slate-500 text-center';
             
             const wexOptions = document.getElementById('wex-options');
+            const inkargoOptions = document.getElementById('inkargo-options');
+            
             if (agency === 'wex') {
                 wexOptions.classList.remove('hidden');
                 wexOptions.classList.add('flex');
+                inkargoOptions.classList.add('hidden');
             } else {
                 wexOptions.classList.add('hidden');
                 wexOptions.classList.remove('flex');
+                inkargoOptions.classList.remove('hidden');
                 esPerfume = false;
                 wexMethod = 'courier';
                 updatePerfumeUI();
             }
             document.getElementById('receipt-agency-name').innerText = `${agency} Logistics Express`;
             document.getElementById('receipt-icon-bg').className = `p-4 rounded-2xl ${agency === 'inkargo' ? 'bg-blue-600' : 'bg-red-600'} text-white shadow-xl text-center text-left`;
+            updateTaxUI();
             updateCalculator();
         }
 
@@ -723,11 +739,19 @@
 
         function toggleTax() {
             aplicarTaxUSA = !aplicarTaxUSA;
-            const btn = document.getElementById('btn-tax');
-            btn.className = `p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all ${aplicarTaxUSA ? 'bg-green-600/20 border-green-500 text-green-400' : 'bg-white/5 border-white/10 text-slate-500 text-left'}`;
-            btn.querySelector('.w-10').className = `w-10 h-6 rounded-full relative transition-all ${aplicarTaxUSA ? 'bg-green-500' : 'bg-slate-700'} text-left`;
-            btn.querySelector('.absolute').className = `absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${aplicarTaxUSA ? 'right-1' : 'left-1'} text-left`;
+            updateTaxUI();
             updateCalculator();
+        }
+
+        function updateTaxUI() {
+            const btnWex = document.getElementById('btn-tax-wex');
+            const btnInkargo = document.getElementById('btn-tax-inkargo');
+            
+            [btnWex, btnInkargo].forEach(btn => {
+                btn.className = `p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all ${aplicarTaxUSA ? 'bg-green-600/20 border-green-500 text-green-400' : 'bg-white/5 border-white/10 text-slate-500 text-left'}`;
+                btn.querySelector('.w-10').className = `w-10 h-6 rounded-full relative transition-all ${aplicarTaxUSA ? 'bg-green-500' : 'bg-slate-700'} text-left`;
+                btn.querySelector('.absolute').className = `absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${aplicarTaxUSA ? 'right-1' : 'left-1'} text-left`;
+            });
         }
 
         function togglePerfume() {
@@ -772,7 +796,9 @@
                 viajeroRows.classList.add('hidden');
 
                 const rate = tarifas[currentCalcAgency];
-                const taxUSA = (currentCalcAgency === 'wex' && aplicarTaxUSA) ? costoTotalMercancia * 0.07 : 0;
+                // Aplicar Tax USA si está activo
+                const taxUSA = aplicarTaxUSA ? costoTotalMercancia * 0.07 : 0;
+                
                 let envioTarifa = rate.kg;
                 if (esPerfume && currentCalcAgency === 'wex') envioTarifa = 12.00;
                 const costoEnvio = peso * envioTarifa;
@@ -812,11 +838,11 @@
 
         window.onload = () => {
             lucide.createIcons();
+            updateTaxUI(); // Sincronizar UI inicial del botón tax
             updateCalculator();
         }
     </script>
 </body>
-
 </html>
 
 

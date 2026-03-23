@@ -815,7 +815,7 @@
 
                 if (costoTotalMercancia > 200) {
                     document.getElementById('alert-box').className = "p-8 bg-orange-500 text-orange-950 rounded-[2.5rem] flex gap-6 font-black text-sm shadow-2xl border-l-[12px] border-orange-700 italic animate-pulse";
-                    document.getElementById('alert-text').innerText = `ALERTA: Superas $200, Aduanas aplicará el ${pctImp}%.`;
+                    document.getElementById('alert-text').innerText = `¡ALERTA DE SOBRECOSTO!: Superas $200; aduanas aplicará un ${pctImp}% de impuesto extra.`;
                 } else {
                     document.getElementById('alert-box').className = "p-8 bg-green-500 text-green-950 rounded-[2.5rem] flex gap-6 font-black text-sm shadow-2xl border-l-[12px] border-green-700 italic";
                     document.getElementById('alert-text').innerText = `¡EXCELENTE! Tu compra es menor a $200. 0% impuestos.`;

@@ -191,14 +191,14 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 text-left items-stretch mb-8 transition-all">
             <!-- Agency Details Card -->
-            <div class="lg:col-span-8 bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-8 lg:p-10 border border-slate-200 shadow-sm overflow-hidden relative flex flex-col justify-between">
-                <div>
+            <div class="lg:col-span-8 bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-8 lg:p-10 border border-slate-200 shadow-sm overflow-hidden relative flex flex-col">
+                <div class="flex-grow flex flex-col justify-center">
                     <!-- Sección de Costos Destacados -->
-                    <div id="torres-highlight-costs" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div id="torres-highlight-costs" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                         <div class="bg-yellow-highlight p-4 rounded-[1.5rem] flex items-center justify-between">
                             <div class="flex items-center gap-4">
                                 <i data-lucide="percent" class="w-6 h-6 text-yellow-700"></i>
-                                <span class="font-black text-base uppercase italic tracking-tighter text-yellow-900">0% TAX Florida</span>
+                                <span class="font-black text-base uppercase italic tracking-tighter text-yellow-900">0% TAX</span>
                             </div>
                             <i data-lucide="check-circle" class="text-yellow-700"></i>
                         </div>
@@ -211,43 +211,43 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4 border-b border-slate-100 pb-6 mb-6 text-center">
+                    <div id="main-rates-container" class="grid grid-cols-2 gap-4 border-b border-slate-100 pb-8 mb-8 text-center transition-all">
                         <div class="px-2">
                             <p class="text-[9px] md:text-[10px] text-slate-400 font-black uppercase tracking-[0.2em] mb-2 italic">Tarifa por KG</p>
-                            <p id="agency-kg" class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-blue-600 leading-none">$5.95</p>
+                            <p id="agency-kg" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-blue-600 leading-none">$5.95</p>
                         </div>
                         <div class="border-l border-slate-100 px-2">
                             <p class="text-[9px] md:text-[10px] text-slate-400 font-black uppercase tracking-[0.2em] mb-2 italic">Desaduanaje</p>
-                            <p id="agency-des" class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-slate-800 leading-none">$8.00</p>
+                            <p id="agency-des" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-slate-800 leading-none">$8.00</p>
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-                        <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                    <div id="badges-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <i data-lucide="badge-check" class="text-green-500 shrink-0 w-5 h-5"></i>
                             <span id="agency-tax-info" class="text-[10px] font-black italic uppercase">LIBRE DE TAX</span>
                         </div>
-                        <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <i data-lucide="package" class="text-red-500 shrink-0 w-5 h-5"></i>
                             <span id="agency-perfume-info" class="text-[10px] font-black italic uppercase leading-tight">NO PERMITE PERFUMES</span>
                         </div>
-                        <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                        <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <i data-lucide="plane" class="text-purple-500 shrink-0 w-5 h-5"></i>
                             <span id="agency-viajeros" class="text-[10px] font-black italic uppercase leading-tight">NO VIAJEROS</span>
                         </div>
                     </div>
 
                     <!-- Sección: NUESTROS SERVICIOS ESPECIALIZADOS (Nuevo Almacén) -->
-                    <div id="torres-specialized-services" class="hidden mb-6">
+                    <div id="torres-specialized-services" class="hidden mb-8">
                         <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 italic mb-4">NUESTROS SERVICIOS ESPECIALIZADOS:</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             <div class="p-3 bg-blue-50/50 rounded-xl border border-blue-100 flex items-start gap-3">
                                 <i data-lucide="smartphone" class="w-5 h-5 text-blue-600 shrink-0"></i>
-                                <div><h5 class="text-[10px] font-black uppercase leading-none mb-1">MTC</h5><p class="text-[9px] text-slate-500 leading-tight">Homologación de equipos móviles y otros.</p></div>
+                                <div><h5 class="text-[10px] font-black uppercase leading-none mb-1">MTC</h5><p class="text-[9px] text-slate-500 leading-tight">Homologación de equipos móviles.</p></div>
                             </div>
                             <div class="p-3 bg-red-50/50 rounded-xl border border-red-100 flex items-start gap-3">
                                 <i data-lucide="box" class="w-5 h-5 text-red-600 shrink-0"></i>
-                                <div><h5 class="text-[10px] font-black uppercase leading-none mb-1">DIGESA</h5><p class="text-[9px] text-slate-500 leading-tight">Permisos para juguetes (hasta 100 unidades).</p></div>
+                                <div><h5 class="text-[10px] font-black uppercase leading-none mb-1">DIGESA</h5><p class="text-[9px] text-slate-500 leading-tight">Permisos para juguetes (hasta 100u).</p></div>
                             </div>
                             <div class="p-3 bg-green-50/50 rounded-xl border border-green-100 flex items-start gap-3">
                                 <i data-lucide="pill" class="w-5 h-5 text-green-600 shrink-0"></i>
@@ -259,20 +259,24 @@
                             </div>
                             <div class="p-3 bg-slate-100 rounded-xl border border-slate-200 flex items-start gap-3">
                                 <i data-lucide="target" class="w-5 h-5 text-slate-800 shrink-0"></i>
-                                <div><h5 class="text-[10px] font-black uppercase leading-none mb-1">SUCAMEC</h5><p class="text-[9px] text-slate-500 leading-tight">Permisos para armas de entrenamiento.</p></div>
+                                <div><h5 class="text-[10px] font-black uppercase leading-none mb-1">SUCAMEC</h5><p class="text-[9px] text-slate-500 leading-tight">Permisos para armas entrenamiento.</p></div>
                             </div>
                             <div class="p-3 bg-blue-100 rounded-xl border border-blue-200 flex items-start gap-3">
                                 <i data-lucide="wrench" class="w-5 h-5 text-blue-800 shrink-0"></i>
                                 <div><h5 class="text-[10px] font-black uppercase leading-none mb-1">AUTOPARTES</h5><p class="text-[9px] text-slate-500 leading-tight">Repuestos de segundo uso.</p></div>
                             </div>
                         </div>
-                        <div class="mt-3 p-3 bg-red-600 text-white rounded-xl flex items-center gap-3">
-                            <i data-lucide="unlock" class="w-4 h-4"></i>
-                            <span class="text-[9px] font-black uppercase italic">Liberación de carga retenida si en caso hay alguna negligencia con tu paquete</span>
+                        <!-- NUEVA OPCIÓN: LIBERACIÓN DE CARGA -->
+                        <div class="mt-4 p-4 bg-red-600 text-white rounded-[1.5rem] flex items-center gap-4 shadow-lg shadow-red-600/20 border-2 border-white/10">
+                            <div class="bg-white/20 p-2 rounded-xl shrink-0"><i data-lucide="unlock" class="w-5 h-5"></i></div>
+                            <div class="text-left">
+                                <h5 class="text-[10px] font-black uppercase tracking-tight leading-none mb-1">GESTIÓN ESPECIALIZADA DE MERCANCÍA</h5>
+                                <p class="text-[9px] font-bold italic text-white/90 leading-tight uppercase">LIBERACIÓN DE CARGA RETENIDA ANTE CUALQUIER INCIDENCIA O NEGLIGENCIA LOGÍSTICA.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                    <div id="secondary-info" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <i data-lucide="wallet" class="text-blue-500 shrink-0 w-5 h-5"></i>
                             <span id="agency-impuestos-gestion" class="text-[10px] font-black italic uppercase leading-tight">GESTIONAN TU PAGO Y TE COBRAN DIRECTO</span>
@@ -284,7 +288,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-4 justify-between items-center bg-blue-50/50 p-5 rounded-[2rem] border border-blue-100 text-left mt-auto">
+                <div class="flex flex-col sm:flex-row gap-4 justify-between items-center bg-blue-50/50 p-5 rounded-[2rem] border border-blue-100 text-left">
                     <div class="flex items-center gap-4">
                         <i data-lucide="phone" class="text-blue-600 w-7 h-7"></i>
                         <div class="text-left">
@@ -292,7 +296,7 @@
                             <p id="agency-phone" class="text-lg font-black leading-none">930 331 963</p>
                         </div>
                     </div>
-                    <a id="agency-wa-link" href="https://wa.me/51930331963" target="_blank" class="w-full sm:w-auto text-center px-6 py-3 bg-[#0F172A] text-white rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-600 transition-all">Contactar</a>
+                    <a id="agency-wa-link" href="https://wa.me/51930331963" target="_blank" class="w-full sm:w-auto text-center px-8 py-4 bg-[#0F172A] text-white rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-blue-600 transition-all">Contactar Agencia</a>
                 </div>
             </div>
 
@@ -338,12 +342,12 @@
                     <div class="space-y-8 text-left max-w-5xl">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="text-[10px] md:text-xs font-black text-red-500 uppercase tracking-widest mb-3 block italic">Full Name / First Name</label>
-                                <div id="address-name" class="bg-white/5 p-5 lg:p-8 rounded-2xl border border-white/10 font-mono text-base sm:text-xl break-all">ESX100139 INKARGO ADA [TU NOMBRE]</div>
+                                <label id="label-name" class="text-[10px] md:text-xs font-black text-red-500 uppercase tracking-widest mb-3 block italic">Nombres / First Name</label>
+                                <div id="address-name" class="bg-white/5 p-5 lg:p-8 rounded-2xl border border-white/10 font-mono text-base sm:text-xl break-all">ESX 100139 INKARGO ADA</div>
                             </div>
-                            <div id="container-last-name" class="hidden">
-                                <label class="text-[10px] md:text-xs font-black text-red-500 uppercase tracking-widest mb-3 block italic">Last Name</label>
-                                <div id="address-lastname" class="bg-white/5 p-5 lg:p-8 rounded-2xl border border-white/10 font-mono text-base sm:text-xl break-all">[TUS NOMBRES + APELLIDOS]</div>
+                            <div id="container-last-name">
+                                <label id="label-lastname" class="text-[10px] md:text-xs font-black text-red-500 uppercase tracking-widest mb-3 block italic">Apellidos / Last Name</label>
+                                <div id="address-lastname" class="bg-white/5 p-5 lg:p-8 rounded-2xl border border-white/10 font-mono text-base sm:text-xl break-all">[TU NOMBRE Y APELLIDO]</div>
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -489,7 +493,7 @@
                             </div>
                             <div class="w-10 h-6 rounded-full relative bg-slate-700 shrink-0"><div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full"></div></div>
                         </button>
-                        <button onclick="togglePerfume()" id="btn-perfume-global" class="p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all bg-white/5 border-white/10 text-slate-500 text-left">
+                        <button onclick="togglePerfume()" id="btn-perfume-global" class="p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all bg-white/5 border-white/10 text-slate-500 text-left hidden">
                             <div class="flex items-center gap-4 text-left">
                                 <i data-lucide="package"></i>
                                 <div class="text-left"><p class="text-[10px] font-black uppercase mb-1">Es Perfume</p><p id="perfume-sub-text" class="text-[9px] font-bold opacity-60">Tarifa especial</p></div>
@@ -593,8 +597,14 @@
                 phone: '930 331 963', wa: '51930331963',
                 office: 'JR Brigadier Mateo Pumacahua 2541 - Lince', ref: 'REF: LINCE', hours: '9AM - 6PM',
                 mapUrl: 'https://www.google.com/maps/search/?api=1&query=Jr.+Brigadier+Mateo+Pumacahua+2541,+Lince',
-                importantNote: 'IMPORTANTE: Es vital incluir tu código de casillero (ESX100139...) en el nombre.',
-                address: { name: 'ESX100139 INKARGO ADA [TU NOMBRE]', lastname: '', line1: '9990 NW 14TH ST STE 110', city: 'DORAL, FL, 33192', phone: '+1 (786) 845-8828' }
+                importantNote: 'IMPORTANTE: Es vital incluir tu código de casillero (ESX 100139...) para evitar cualquier incoveniente o perdida de su paquete.',
+                address: { 
+                    name: 'ESX 100139 INKARGO ADA', 
+                    lastname: '[TU NOMBRE Y APELLIDO]', 
+                    line1: '9990 NW 14TH ST STE 110', 
+                    city: 'DORAL, FL, 33192', 
+                    phone: '+1 (786) 845-8828' 
+                }
             },
             wex: {
                 name: 'WEX Logistics Express',
@@ -634,12 +644,22 @@
 
             const torresHigh = document.getElementById('torres-highlight-costs');
             const torresServ = document.getElementById('torres-specialized-services');
+            const mainRates = document.getElementById('main-rates-container');
+            const badgesGrid = document.getElementById('badges-grid');
+            const secondaryInfo = document.getElementById('secondary-info');
+
             if (agency === 'torres') {
                 torresHigh.classList.remove('hidden');
                 torresServ.classList.remove('hidden');
+                mainRates.className = 'grid grid-cols-2 gap-4 border-b border-slate-100 pb-4 mb-4 text-center transition-all';
+                badgesGrid.className = 'grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4';
+                secondaryInfo.className = 'grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4';
             } else {
                 torresHigh.classList.add('hidden');
                 torresServ.classList.add('hidden');
+                mainRates.className = 'grid grid-cols-2 gap-4 border-b border-slate-100 pb-12 mb-12 text-center transition-all';
+                badgesGrid.className = 'grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12';
+                secondaryInfo.className = 'grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12';
             }
 
             document.getElementById('agency-kg').innerText = data.kg;
@@ -655,6 +675,19 @@
             document.getElementById('lima-ref').innerText = data.ref;
             document.getElementById('lima-hours').innerText = data.hours;
             document.getElementById('btn-maps').onclick = () => window.open(data.mapUrl, '_blank');
+
+            const labelName = document.getElementById('label-name');
+            const labelLastname = document.getElementById('label-lastname');
+            
+            if (agency === 'inkargo') {
+                labelName.innerText = "Nombres / First Name";
+                labelLastname.innerText = "Apellidos / Last Name";
+            } else if (agency === 'wex') {
+                labelName.innerText = "Full Name / First Name";
+            } else {
+                labelName.innerText = "First Name";
+                labelLastname.innerText = "Last Name";
+            }
 
             document.getElementById('address-name').innerText = data.address.name;
             const containerLast = document.getElementById('container-last-name');
@@ -677,9 +710,19 @@
             ['inkargo', 'wex', 'torres'].forEach(a => {
                 document.getElementById(`calc-${a}`).className = agency === a ? 'flex-1 py-4 rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all bg-white text-blue-600 shadow-2xl text-center' : 'flex-1 py-4 rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest transition-all text-slate-500 text-center';
             });
+            
             const wexMethodDiv = document.getElementById('wex-specific-method');
-            if (agency === 'wex') wexMethodDiv.classList.remove('hidden');
-            else { wexMethodDiv.classList.add('hidden'); changeWexMethod('courier'); }
+            const perfToggle = document.getElementById('btn-perfume-global');
+            
+            if (agency === 'wex') {
+                wexMethodDiv.classList.remove('hidden');
+                perfToggle.classList.remove('hidden');
+            } else {
+                wexMethodDiv.classList.add('hidden');
+                perfToggle.classList.add('hidden');
+                esPerfume = false;
+                changeWexMethod('courier');
+            }
 
             const perfText = document.getElementById('perfume-sub-text');
             if (agency === 'wex') perfText.innerText = 'Tarifa: $12.00/kg';
@@ -688,6 +731,8 @@
 
             document.getElementById('receipt-agency-name').innerText = agencies[agency].name;
             document.getElementById('receipt-icon-bg').className = `p-4 rounded-2xl ${agency === 'inkargo' ? 'bg-blue-600' : (agency === 'wex' ? 'bg-red-600' : 'bg-yellow-500')} text-white shadow-xl text-center text-left`;
+            
+            updateUIOptions();
             updateCalculator();
         }
 
@@ -695,14 +740,19 @@
             wexMethod = method;
             document.getElementById('wex-courier').className = method === 'courier' ? 'flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest bg-white text-slate-900 shadow-sm' : 'flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-400';
             document.getElementById('wex-viajero').className = method === 'viajero' ? 'flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest bg-white text-slate-900 shadow-sm' : 'flex-1 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest text-slate-400';
+            
+            const perfToggle = document.getElementById('btn-perfume-global');
             if (method === 'viajero') {
-                aplicarTaxUSA = true; esPerfume = false;
+                aplicarTaxUSA = true; 
+                esPerfume = false;
+                perfToggle.classList.add('hidden');
                 document.getElementById('viajero-field').classList.remove('hidden');
                 document.getElementById('res-rows-courier').classList.add('hidden');
                 document.getElementById('res-rows-viajero').classList.remove('hidden');
                 document.getElementById('container-peso').classList.add('opacity-30', 'pointer-events-none');
                 document.getElementById('container-impuestos').classList.add('opacity-30', 'pointer-events-none');
             } else {
+                if (currentCalcAgency === 'wex') perfToggle.classList.remove('hidden');
                 document.getElementById('viajero-field').classList.add('hidden');
                 document.getElementById('res-rows-courier').classList.remove('hidden');
                 document.getElementById('res-rows-viajero').classList.add('hidden');
@@ -714,16 +764,16 @@
         }
 
         function toggleTax() { aplicarTaxUSA = !aplicarTaxUSA; updateUIOptions(); updateCalculator(); }
-        function togglePerfume() { if (currentCalcAgency === 'inkargo' || (currentCalcAgency === 'wex' && wexMethod === 'viajero')) return; esPerfume = !esPerfume; updateUIOptions(); updateCalculator(); }
+        function togglePerfume() { if (currentCalcAgency !== 'wex' || wexMethod === 'viajero') return; esPerfume = !esPerfume; updateUIOptions(); updateCalculator(); }
 
         function updateUIOptions() {
             const btnTax = document.getElementById('btn-tax-global');
             btnTax.className = `p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all ${aplicarTaxUSA ? 'bg-green-600/20 border-green-500 text-green-400' : 'bg-white/5 border-white/10 text-slate-500 text-left'}`;
             btnTax.querySelector('.w-10').className = `w-10 h-6 rounded-full relative transition-all ${aplicarTaxUSA ? 'bg-green-500' : 'bg-slate-700'}`;
             btnTax.querySelector('.absolute').className = `absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${aplicarTaxUSA ? 'right-1' : 'left-1'}`;
+            
             const btnPerf = document.getElementById('btn-perfume-global');
-            const isViajeroWex = (currentCalcAgency === 'wex' && wexMethod === 'viajero');
-            btnPerf.className = `p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all ${currentCalcAgency === 'inkargo' || isViajeroWex ? 'opacity-30 pointer-events-none' : ''} ${esPerfume ? 'bg-red-600/20 border-red-500 text-red-400' : 'bg-white/5 border-white/10 text-slate-500'}`;
+            btnPerf.className = `p-6 rounded-[1.5rem] border-2 flex items-center justify-between transition-all ${currentCalcAgency !== 'wex' || wexMethod === 'viajero' ? 'hidden' : ''} ${esPerfume ? 'bg-red-600/20 border-red-500 text-red-400' : 'bg-white/5 border-white/10 text-slate-500'}`;
             btnPerf.querySelector('.w-10').className = `w-10 h-6 rounded-full relative transition-all ${esPerfume ? 'bg-red-500' : 'bg-slate-700'}`;
             btnPerf.querySelector('.absolute').className = `absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${esPerfume ? 'right-1' : 'left-1'}`;
         }
@@ -737,6 +787,7 @@
             const costoViajeroFee = parseFloat(document.getElementById('input-viajero-fee').value) || 0;
             const costoTotalMercancia = precioUnitario * cantidad;
             let totalUSD = 0;
+
             if (currentCalcAgency === 'wex' && wexMethod === 'viajero') {
                 const taxUSA = aplicarTaxUSA ? costoTotalMercancia * 0.07 : 0;
                 totalUSD = costoTotalMercancia + taxUSA + costoViajeroFee;
@@ -749,16 +800,19 @@
                 const taxUSA = aplicarTaxUSA ? costoTotalMercancia * 0.07 : 0;
                 let envioTarifa = rate.kg;
                 if (esPerfume && currentCalcAgency === 'wex') envioTarifa = 12.00;
+                
                 const costoEnvio = peso * envioTarifa;
                 const desaduanaje = rate.des;
                 const baseImponible = costoTotalMercancia + taxUSA + costoEnvio + desaduanaje;
                 const impuestos = costoTotalMercancia > 200 ? baseImponible * (pctImp / 100) : 0;
                 totalUSD = baseImponible + impuestos;
+
                 document.getElementById('res-peso-val').innerText = peso;
                 document.getElementById('res-envio').innerText = `$${costoEnvio.toFixed(2)}`;
                 document.getElementById('res-des').innerText = `$${desaduanaje.toFixed(2)}`;
                 document.getElementById('res-taxusa').innerText = taxUSA > 0 ? `$${taxUSA.toFixed(2)}` : '$0.00 FREE';
                 document.getElementById('res-impuestos').innerText = impuestos > 0 ? `$${impuestos.toFixed(2)}` : '$0.00 FREE';
+
                 if (costoTotalMercancia > 200) {
                     document.getElementById('alert-box').className = "p-8 bg-orange-500 text-orange-950 rounded-[2.5rem] flex gap-6 font-black text-sm shadow-2xl border-l-[12px] border-orange-700 italic animate-pulse";
                     document.getElementById('alert-text').innerText = `ALERTA: Superas $200, Aduanas aplicará el ${pctImp}%.`;
@@ -767,6 +821,7 @@
                     document.getElementById('alert-text').innerText = `¡EXCELENTE! Tu compra es menor a $200. 0% impuestos.`;
                 }
             }
+
             const totalPEN = totalUSD * tc;
             document.getElementById('res-costo').innerText = `$${costoTotalMercancia.toFixed(2)}`;
             document.getElementById('res-totalusd').innerText = `$${totalUSD.toFixed(2)}`;
@@ -779,4 +834,3 @@
     </script>
 </body>
 </html>
-
